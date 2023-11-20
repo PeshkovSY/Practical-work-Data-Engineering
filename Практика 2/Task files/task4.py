@@ -19,12 +19,12 @@ def update_price(product, price_info):
 
 
 # считаем данные о товарах, которые лежат в файл формата pkl
-with open("4/products_0.pkl", "rb") as f:
+with open("2/Task files/products_26.pkl", "rb") as f:
     products = pickle.load(f)
 
 #print(products)
 # cчитаем данные об обновлении цен
-with open("4/price_info_0.json") as f:
+with open("2/Task files/price_info_26.json") as f:
     price_info = json.load(f)
 
 #print(price_info)
@@ -37,7 +37,7 @@ price_info_dict = dict() # name -> {name,method,param}
 for item in price_info:
     price_info_dict[item["name"]] = item
 
-# print(products)
+# print(price_info_dict)
 # теперь можем пропустить через нашу функцию обновления все товары
 for product in products:
     # получаем по ключу (имени товара) объект с информацией
